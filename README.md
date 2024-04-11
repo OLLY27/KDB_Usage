@@ -66,6 +66,52 @@ Relevant screenshots and explanantions
 Brief summary and list benefits whilstr referring to limiations 
 
 ___________________________________________________
+## qPad  
+Description anbd explanation
+
+### How to Set up and Use 
+
+Relevant Links
+Text 
+Screenshots
+
+### Working Examples
+
+``` sh
+
+```
+Relevant screenshots and explanantions
+
+### Conclusion
+Brief summary and list benefits whilstr referring to limiations 
+
+___________________________________________________
+## Jupyter Notebooks  
+A verstaile approach which has been used alot in your month one training and good to always revisit - https://fdplc.sharepoint.com/sites/LearningDevelopment/SitePages/Week-1---Getting-Started.aspx
+
+### How to Set up and Use 
+
+How to access and set up from your browse
+
+How it works and how to oepn connections etc
+
+We can use KX Academy, a greatr resource for practicing with notebooks here - https://learninghub.kx.com/academy/
+
+Relevant Links
+Text 
+Screenshots
+
+### Working Examples
+
+``` sh
+
+```
+Relevant screenshots and explanantions
+
+### Conclusion
+Brief summary and list benefits whilstr referring to limiations 
+
+___________________________________________________
 ## Exercises
 
 You can try and oepn each of the above methods and run the following once connected. Have a look at the results of each and see how they compare in the outputs and how we can change the output to our desired look.
@@ -78,3 +124,8 @@ select date,tiem,sym,buy from trades where date=.z.d-2
 ```
 
 You can make your own queries and try and query the above date set
+
+___________________________________________________
+## KX Community 
+
+Be sure to sign up to the KX Community too (like StackOverflow) for tips and pages - https://learninghub.kx.com/
