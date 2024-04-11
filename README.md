@@ -1,5 +1,5 @@
 # KDB_Usage
-##Introduction
+## Introduction
 This information is a continuation on from your motnh 1 training. It will aim to bridge the gap from your initial traininging, to whta you may experience on client site. In your training, you will have covered how KDB Tables are stored on disk (partitioned/splayed etc.). In an establised project, the data you would be working with will liely be stored like this. An example of which could be a data lake on AWS. Knowing the different methods and trying to connect to the data lake to query and maintain data is an important skill to have ahead of client site. We will aim to look at the different platforms you can use for connecting to the datalakein more detail below.
 
 ___________________________________________________
