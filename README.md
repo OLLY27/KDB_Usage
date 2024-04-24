@@ -458,11 +458,16 @@ To install Jupyter Notebooks, you can follow these steps:
 4. **Start Using Jupyter Notebook:**
    - You can now create new notebooks, open existing ones, write code, execute cells, create visualizations, and more within the Jupyter Notebook interface.
 
-KX Academy, available at [learninghub.kx.com/academy/](https://learninghub.kx.com/academy/), offers concise tutorials and structured courses for learning kdb+ and q, making it an ideal resource for users seeking to enhance their skills efficiently.
+KX Academy, available at [learninghub.kx.com/academy/](https://learninghub.kx.com/academy/), offers concise tutorials and structured courses for learning kdb+ and q, making it an ideal resource for users seeking to enhance their skills efficiently using their own sandbox environment.
 
-![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/c28e9c14-c334-41a7-a7b4-1ab0ad135cc4)
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/c462f5de-5003-43bc-bd9f-724a283f7a9f)
+
 
 ### Working Examples
+
+Once installed you can see a screen like below to launhc various languages 
+
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/c28e9c14-c334-41a7-a7b4-1ab0ad135cc4)
 
 ``` sh
 // Create a list of numbers
