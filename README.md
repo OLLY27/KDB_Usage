@@ -11,9 +11,6 @@ Good link for what a console is for background - https://www.linuxbabe.com/comma
 ### How to Set up and Use 
 You can install q directly on your personal computer or you can set up a free EC2 AWS Instance. This exposure to AWS can be beneficial to the project as well and would recommend exposure to AWS too: https://fdplc.sharepoint.com/sites/FirstDerivativeCloudEngineering/SitePages/Cloud-Service-Providers.aspx
 
- - Set up a free EC2 Instance -  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
- - Installing q - https://code.kx.com/q/learn/install/
-
  - Setting up a free AWS instance and installing Q on it involves a few steps. Here's a general guide to get you started:
 
 1. **Create an AWS Account**:
@@ -45,8 +42,11 @@ You can install q directly on your personal computer or you can set up a free EC
 
 Once you've completed these steps, you should have a running AWS EC2 instance with Q installed and ready to use. Remember to monitor your AWS usage to ensure that you stay within the limits of the AWS Free Tier to avoid unexpected charges.
 
-Text 
-Screenshots
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/6a5f0f33-aba6-4980-9bfc-4cf59a978063)
+
+#### Useful Links 
+ - Set up a free EC2 Instance -  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+ - Installing q - https://code.kx.com/q/learn/install/
 
 ### Working Examples
 Load up your console using the alias you have created and above and try querying the below table and typing some of the system commands to get confartable with the q Console - https://code.kx.com/q/basics/syscmds/
@@ -56,11 +56,53 @@ trades:([] date:asc 1000?.z.d-til 5; time:1000?24:00; sym:1000?`appl`fb`amzn`goo
 quotes:([] date:asc 10000?.z.d- til 5; time:10000?24:00; sym:10000?`appl`fb`amzn`goog; bid:100-10000?1f; offer:100-1*10000?1f)
 
 select date,tiem,sym,buy from trades where date=.z.d-2
+
+select last price by sym from trades
 ```
-Relevant screenshots and explanantions
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/0fc31f93-6d90-46d9-915d-8d5593615197)
+
+Debugging in Q involves identifying and resolving issues in your code, such as syntax errors, logical errors, or unexpected behavior. One common approach to debugging in Q is to use the .z.s system function along with the .z system variables to inspect and monitor code execution.
+
+By inspecting the debug output, you can identify any issues or unexpected behavior in your code and make necessary adjustments to fix them. This approach can be applied to more complex functions and scripts in Q to facilitate effective debugging and troubleshooting.
+
+``` sh
+calculateAverageTradeSize:{
+    avgTradeSize:select avg size by sym from trades;
+    joinedTable:quotes lj avgTradeSize;
+    joinedTable
+}
+
+combinedTable: calculateAverageTradeSize[trades;quotes]
+
+/same again but lets make an error and debug it
+
+calculateAverageTradeSize:{
+    'dbg;
+    avgTradeSize:select avG size by sym from trades;
+    joinedTable:quotes lj avgTradeSize;
+    joinedTable
+}
+/go through line by line to observe the output and find the error
+```
 
 ### Conclusion
-Brief summary and list benefits whilstr referring to limiations 
+
+**Benefits:**
+1. **Interactive Environment**: Enables quick query execution and immediate feedback.
+2. **Fast Prototyping**: Facilitates rapid development and testing of algorithms.
+3. **Efficient Data Exploration**: Provides tools for easy data inspection and manipulation.
+4. **Debugging and Troubleshooting**: Supports debugging and issue resolution within the console.
+5. **Real-time Monitoring**: Allows continuous monitoring and analysis of live data streams.
+6. **Customization and Extension**: Offers flexibility for customization and integration with external tools.
+7. **Education and Training**: Provides a practical learning environment for students and practitioners.
+
+**Detriments Compared to UI Platforms:**
+1. **Limited Visualization**: Lack of graphical interface may limit complex data visualization capabilities.
+2. **Steep Learning Curve**: Requires familiarity with command-line interfaces and Q language syntax.
+3. **Complex Queries**: Performing complex queries may be more challenging compared to GUI-based tools.
+4. **Less Intuitive**: May not be as intuitive for users accustomed to graphical user interfaces (GUIs).
+5. **Limited Collaboration**: Collaboration features are often limited compared to UI platforms with built-in collaboration tools.
+6. **Resource Intensive**: Console-based environments may require more manual intervention for resource management and optimization.
 
 ___________________________________________________
 ## qStudio    
@@ -147,20 +189,6 @@ Relevant screenshots and explanantions
 
 ### Conclusion
 Brief summary and list benefits whilstr referring to limiations 
-
-___________________________________________________
-## Exercises
-
-You can try and oepn each of the above methods and run the following once connected. Have a look at the results of each and see how they compare in the outputs and how we can change the output to our desired look.
-
-``` sh
-trades:([] date:asc 1000?.z.d-til 5; time:1000?24:00; sym:1000?`appl`fb`amzn`goog; side:1000?`Buy`Sell; price:99+1000?2f; size: 1000?1000)
-quotes:([] date:asc 10000?.z.d- til 5; time:10000?24:00; sym:10000?`appl`fb`amzn`goog; bid:100-10000?1f; offer:100-1*10000?1f)
-
-select date,tiem,sym,buy from trades where date=.z.d-2
-```
-
-You can make your own queries and try and query the above date set
 
 ___________________________________________________
 ## KX Community 
