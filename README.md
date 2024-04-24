@@ -106,23 +106,82 @@ calculateAverageTradeSize:{
 
 ___________________________________________________
 ## qStudio    
-Description anbd explanation
+qStudio is an integrated development environment (IDE) tailored for working with Kx Systems' kdb+ database and the Q programming language. It provides a comprehensive suite of tools and features to facilitate efficient development, analysis, and deployment of Q code and data solutions. With its intuitive interface and powerful capabilities, qStudio empowers developers, data scientists, and analysts to streamline their workflow and maximize productivity when working with kdb+ and Q.
 
 ### How to Set up and Use 
 
-Relevant Links - timestored https://www.timestored.com/qstudio/
-Text 
-Screenshots
+**How to Install qStudio:**
+
+To install qStudio, follow these steps:
+1. Visit the official qStudio website or download the installer from [the Kx Systems website](https://www.timestored.com/qstudio/).
+2. Run the installer executable file.
+3. Follow the on-screen instructions to complete the installation process.
+4. Once the installation is complete, launch qStudio from the desktop shortcut or start menu icon.
+
+Using qStudio is straightforward and intuitive. Here's a brief guide on how to use qStudio effectively:
+
+1. **Launching qStudio:**
+   - After installation, launch qStudio by double-clicking the desktop shortcut or selecting it from the start menu.
+
+2. **Creating or Opening a Project:**
+   - Upon launching qStudio, you'll be presented with options to create a new project or open an existing one.
+   - If you're starting a new project, select "New Project" and provide a name and location for your project files.
+   - If you have an existing project, select "Open Project" and navigate to the project directory.
+
+3. **Writing Q Code:**
+   - qStudio provides a code editor where you can write Q code.
+   - Create a new Q script file by selecting "File" > "New" > "Q Script" or open an existing script file.
+   - Write your Q code in the editor. qStudio offers syntax highlighting, code completion, and error checking to help you write code more efficiently.
+
+4. **Executing Q Code:**
+   - To execute Q code, you can use the interactive console provided by qStudio.
+   - Select the code snippet you want to execute in the editor and press Ctrl + Enter (or use the designated shortcut).
+   - Alternatively, type directly into the console and press Enter to execute Q code interactively.
+
+5. **Debugging Q Code:**
+   - qStudio includes debugging tools to help you identify and resolve issues in your Q code.
+   - Set breakpoints in your code by clicking in the left margin of the editor.
+   - Run your code in debug mode by selecting "Debug" > "Start Debugging".
+   - Use the debugging toolbar to step through code, inspect variables, and evaluate expressions.
+
+6. **Connecting to kdb+ Databases:**
+   - qStudio allows you to connect to kdb+ databases for querying and retrieving data.
+   - Select "Database" > "Connect to Database" and provide the connection details for your kdb+ instance.
+   - Once connected, you can execute queries directly from qStudio and work with the results.
+
+7. **Data Visualization:**
+   - qStudio includes built-in data visualization tools for creating charts, plots, and graphs from Q data.
+   - Select "View" > "Data Visualization" to open the visualization pane.
+   - Drag and drop variables from the data pane onto the visualization canvas to create visualizations.
+
+8. **Saving and Sharing Projects:**
+   - Save your project files regularly by selecting "File" > "Save" or using the Ctrl + S shortcut.
+   - Share your projects with colleagues by packaging them into a zip file and sharing the zip file or hosting it on a version control system like Git.
+
+By following these steps and also this link https://www.timestored.com/qstudio/help/, you can effectively use qStudio to develop, analyze, and deploy Q code and data solutions.
 
 ### Working Examples
 
 ``` sh
-
+([] dt:2013.01.01+til 21; cosineWave:cos a; sineWave:sin a:0.6*til 21)
 ```
-Relevant screenshots and explanantions
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/ba3adc24-9dc8-470b-b574-0de8797bb114)
 
 ### Conclusion
-Brief summary and list benefits whilstr referring to limiations 
+
+**Benefits:**
+1. Comprehensive IDE tailored for kdb+ and Q development.
+2. Intuitive interface with syntax highlighting, code completion, and error checking.
+3. Interactive console for executing Q code and exploring data.
+4. Built-in debugging tools for identifying and resolving issues in code.
+5. Seamless integration with kdb+ databases for querying and retrieving data.
+6. Data visualization capabilities for analyzing and visualizing Q data.
+7. Version control integration with Git for managing code changes and collaboration.
+
+**Detriments:**
+1. Learning curve for users new to kdb+ and Q programming.
+2. Limited customization options compared to some other IDEs.
+3. Resource-intensive for large-scale data processing tasks.
 
 ___________________________________________________
 ## qRemote   
