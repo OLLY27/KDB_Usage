@@ -344,49 +344,161 @@ $ qremote -config config/test.ini -connection TEST.CONN.A
 
 ___________________________________________________
 ## qPad  
-Description anbd explanation
+qPad provides a graphical interface for interacting with Q code and kdb+ databases. It includes features like syntax highlighting and code completion for efficient code writing, along with data visualization tools for analyzing data directly within the IDE. qPad facilitates interactive development and seamless integration with kdb+, enhancing productivity for developers, data scientists, and analysts.
 
 ### How to Set up and Use 
 
-Relevant Links
-Text 
-Screenshots
+**Installing and Setting Up qPad:**
+
+1. **Download qPad Installer:**
+   - [Visit the official qPad website or a trusted source to download the qPad installer for your operating system (Windows, macOS, or Linux)](https://www.qinsightpad.com/download.html).
+
+2. **Run the Installer:**
+   - Double-click the downloaded installer file to begin the installation process.
+   - Follow the on-screen instructions to complete the installation. Choose the installation directory and any additional settings as needed.
+
+3. **Launch qPad:**
+   - Once the installation is complete, launch qPad by double-clicking its icon or searching for it in your applications menu.
+
+**Using qPad:**
+
+1. **Create or Open a Project:**
+   - Upon launching qPad, you can create a new project or open an existing one.
+   - To create a new project, select "File" > "New Project" and provide a name and location for your project files.
+   - To open an existing project, select "File" > "Open Project" and navigate to the directory containing your project files.
+
+2. **Write Q Code:**
+   - qPad provides a code editor where you can write Q code.
+   - Create a new Q script file by selecting "File" > "New File" > "Q Script" or open an existing script file.
+   - Write your Q code in the editor. qPad offers syntax highlighting and code completion to assist with code writing.
+
+3. **Execute Q Code:**
+   - To execute Q code, you can use the built-in console or run scripts directly.
+   - Type or paste your Q code into the console or open your script file and select "Run" > "Run Script" to execute the code.
+
+4. **Debugging Q Code:**
+   - qPad includes debugging tools to help identify and resolve issues in your Q code.
+   - Set breakpoints in your code by clicking in the left margin of the editor.
+   - Run your code in debug mode by selecting "Debug" > "Start Debugging".
+
+5. **Data Visualization:**
+   - qPad integrates data visualization tools for creating charts, plots, and graphs from Q data.
+   - Select "View" > "Data Visualization" to open the visualization pane.
+   - Drag and drop variables from the data pane onto the visualization canvas to create visualizations.
+
+6. **Save and Share Projects:**
+   - Save your project files regularly by selecting "File" > "Save" or using the Ctrl + S shortcut.
+   - Share your projects with colleagues by packaging them into a zip file or hosting them on a version control system like Git.
+
+By following these steps, you can install, set up, and use qPad to write, execute, and analyze Q code for your kdb+ projects.
 
 ### Working Examples
 
 ``` sh
-
+// Example Q code to calculate the average of a list of numbers
+nums: 1 2 3 4 5;  // Define a list of numbers
+avgNums: avg nums;  // Calculate the average of the numbers
+avgNums;  // Output the average
 ```
-Relevant screenshots and explanantions
 
 ### Conclusion
-Brief summary and list benefits whilstr referring to limiations 
+**Benefits of qPad:**
+
+1. **Graphical Interface:** Provides a user-friendly graphical interface, making it accessible to users who prefer visual tools over command-line interfaces.
+
+2. **Interactive Development:** Offers an interactive development environment (IDE) for writing, executing, and debugging Q code, enhancing productivity and efficiency.
+
+3. **Code Editing Features:** Includes advanced code editing features such as syntax highlighting, code completion, and error checking, aiding in code writing and debugging.
+
+4. **Data Visualization:** Integrates data visualization tools for creating charts, plots, and graphs from Q data, allowing users to analyze and visualize data within the IDE.
+
+5. **Integration with kdb+:** Seamlessly integrates with kdb+ databases, enabling users to connect to remote instances, execute queries, and retrieve data directly within the IDE.
+
+**Detriments of qPad:**
+
+1. **Resource Intensive:** May require more system resources compared to lightweight command-line tools, potentially impacting performance on low-spec systems.
+
+2. **Learning Curve:** Users may need to invest time in learning the IDE's interface and features, particularly if they are unfamiliar with graphical development environments.
+
+3. **Dependency on GUI:** Relies on a graphical user interface (GUI), which may be less suitable for users who prefer command-line workflows or remote development scenarios.
+
+4. **Complexity:** The richness of features and options in qPad may introduce complexity for users who require only basic Q code execution and querying capabilities.
+
+5. **Platform Limitations:** Availability of qPad may be limited to specific operating systems, potentially excluding users on unsupported platforms from accessing its features.
 
 ___________________________________________________
 ## Jupyter Notebooks  
-A verstaile approach which has been used alot in your month one training and good to always revisit - https://fdplc.sharepoint.com/sites/LearningDevelopment/SitePages/Week-1---Getting-Started.aspx
+Jupyter Notebook is an open-source web application that enables users to create and share documents containing live code, visualizations, and narrative text, making it a versatile tool for interactive computing and data exploration. A verstaile approach which has been used alot in your month one training and good to always revisit - https://fdplc.sharepoint.com/sites/LearningDevelopment/SitePages/Week-1---Getting-Started.aspx
 
 ### How to Set up and Use 
 
-How to access and set up from your browse
+To install Jupyter Notebooks, you can follow these steps:
 
-How it works and how to oepn connections etc
+1. **Install Python:**
+   - Ensure you have Python installed on your system. You can download and install Python from the official Python website (https://www.python.org/).
 
-We can use KX Academy, a greatr resource for practicing with notebooks here - https://learninghub.kx.com/academy/
+2. **Install Jupyter using pip:**
+   - Open a command-line interface (CLI) or terminal.
+   - Run the following command to install Jupyter using pip, Python's package manager:
+     ```
+     pip install jupyterlab
+     ```
+   - Alternatively, you can install the classic Jupyter Notebook interface with:
+     ```
+     pip install notebook
+     ```
 
-Relevant Links
-Text 
-Screenshots
+3. **Launch Jupyter Notebook:**
+   - After installation, you can launch Jupyter Notebook by typing the following command in your CLI or terminal:
+     ```
+     jupyter notebook
+     ```
+   - This command will start the Jupyter Notebook server and open a new tab in your web browser with the Jupyter Notebook interface.
+
+4. **Start Using Jupyter Notebook:**
+   - You can now create new notebooks, open existing ones, write code, execute cells, create visualizations, and more within the Jupyter Notebook interface.
+
+KX Academy, available at [learninghub.kx.com/academy/](https://learninghub.kx.com/academy/), offers concise tutorials and structured courses for learning kdb+ and q, making it an ideal resource for users seeking to enhance their skills efficiently.
+
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/c28e9c14-c334-41a7-a7b4-1ab0ad135cc4)
 
 ### Working Examples
 
 ``` sh
+// Create a list of numbers
+nums: 1 2 3 4 5;
 
+// Calculate the sum of the numbers
+sum_nums: sum nums;
+
+// Output the result
+sum_nums
 ```
-Relevant screenshots and explanantions
 
 ### Conclusion
-Brief summary and list benefits whilstr referring to limiations 
+**Benefits of Using Jupyter Notebook:**
+
+1. **Interactive Environment:** Jupyter Notebook provides an interactive environment for writing code, running experiments, and visualizing data, enhancing productivity and collaboration.
+
+2. **Support for Multiple Languages:** Supports multiple programming languages including Python, R, and Julia, allowing for versatile data analysis and experimentation.
+
+3. **Rich Visualization:** Offers rich visualization capabilities with inline plotting, allowing users to create interactive charts, graphs, and visualizations directly within the notebook.
+
+4. **Documentation and Explanation:** Enables users to combine code, narrative text, and visualizations in a single document, making it easier to document and share analyses and results.
+
+5. **Integration with Data Science Tools:** Integrates seamlessly with popular data science libraries and tools such as pandas, NumPy, and scikit-learn, facilitating data manipulation, analysis, and machine learning tasks.
+
+**Detriments of Using Jupyter Notebook:**
+
+1. **Version Control Challenges:** Jupyter Notebook files are not always well-suited for version control systems like Git, leading to potential conflicts and difficulties in collaboration.
+
+2. **Execution Order Dependency:** The order of code execution in Jupyter Notebooks can impact the results, making it important to run cells in the correct sequence to avoid errors and inconsistencies.
+
+3. **Resource Intensive:** Jupyter Notebooks can be resource-intensive, particularly when working with large datasets or running computationally intensive tasks, potentially slowing down performance.
+
+4. **Limited IDE Features:** While Jupyter Notebook provides basic code editing features, it lacks the advanced functionality and customization options of dedicated integrated development environments (IDEs).
+
+5. **Dependency Management:** Managing dependencies and ensuring reproducibility can be challenging in Jupyter Notebooks, particularly when sharing or deploying analyses across different environments.
 
 ___________________________________________________
 ## KX Community 
