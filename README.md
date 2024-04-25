@@ -346,6 +346,9 @@ ___________________________________________________
 ## qPad  
 qPad provides a graphical interface for interacting with Q code and kdb+ databases. It includes features like syntax highlighting and code completion for efficient code writing, along with data visualization tools for analyzing data directly within the IDE. qPad facilitates interactive development and seamless integration with kdb+, enhancing productivity for developers, data scientists, and analysts.
 
+![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/8bb051df-36e4-4f26-8e2c-3ad3a96d5ee8)
+
+
 ### How to Set up and Use 
 
 **Installing and Setting Up qPad:**
