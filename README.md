@@ -478,7 +478,7 @@ KX Academy, available at [learninghub.kx.com/academy/](https://learninghub.kx.co
 
 ### Working Examples
 
-Once installed you can see a screen like below to launhc various languages 
+Once installed you can see a screen like below to launch various languages 
 
 ![image](https://github.com/OLLY27/KDB_Usage/assets/127981767/c28e9c14-c334-41a7-a7b4-1ab0ad135cc4)
 
