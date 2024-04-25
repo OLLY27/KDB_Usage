@@ -260,63 +260,73 @@ By following these steps, you can install qRemote on your system and begin using
 By following these steps, you can effectively use qRemote to interact with kdb+ instances, execute Q code, and perform basic debugging and analysis tasks.
 
 ### Working Example
-Start a qprocess on port 5001
+Start a qprocess on port 5002
 ```
-$ q -p 5001
+$ q -p 5002
 ```
-Define some data
+Define a table
 ```
-q) t:([]a:1 2 3;b:2 3 4)
+q) t:([]apple:3 2 3;banana:2 3 7)
 ```
-Now use qremote to connect to the remote process
-
-Run qremote. It will prompt for server details
+Now, initiate qremote to establish a connection with the remote process. Launch qremote, and it will prompt you for server details.
 
 ``` sh
 $ ./qremote
 host:localhost
-port:5001
+port:5002
 user:
 password:
 
 [qremote v1.1]
-[qremote connecting to: :localhost:5001]
-[qremote connected to:  :localhost:5001]
+[qremote connecting to: :localhost:5002]
+[qremote connected to:  :localhost:5002]
 [\\ to exit. 'exit 0' will kill remote process]
 
-q)a:100	
-q)a
-100
+q)x:10
+q)x
+10
 q)t
-a b
----
-1 2
-2 3
-3 4
+apple banana
+------------
+3     2
+2     3
+3     7
 ```
 
-We could achieve the same result using a config file.
+Certainly! Here's how you can use a configuration file with qremote:
 
-```
-$ cat config/test.ini
-[TEST.CONN.A]
-host=localhost
-port=5001
-user=u
-password=p
+1. **Create a Configuration File**: Begin by creating a configuration file. This file typically has a `.qremote` extension, although the name can vary. You can create this file using a text editor like Notepad or Vim.
 
-[TEST.CONN.B]
-host=localhost
-port=6001
-user=u
-password=p
+2. **Specify Server Details**: Within the configuration file, specify the server details in the appropriate format. These details typically include:
+   - Server address or hostname
+   - Port number
+   - Username
+   - Password (if required)
+   
+   Here's an example of how the configuration file might look:
+   ```
+   server = example.com
+   port = 22
+   username = myusername
+   password = mypassword
+   ```
 
-$ qremote -config config/test.ini -connection TEST.CONN.A
-[qremote v1.1]
-[qremote connecting to: :localhost:5001]
-[qremote connected to:  :localhost:5001]
-[\\ to exit. 'exit 0' will kill remote process]
-```
+   You can customize this according to your server's configuration.
+
+3. **Save the Configuration File**: Once you've added the server details to the configuration file, save it with an appropriate name and the `.qremote` extension. Make sure to remember the location where you save this file.
+
+4. **Using the Configuration File with qremote**: Now that you have the configuration file ready, you can use it with qremote. Instead of manually entering the server details each time, you can specify the configuration file when running qremote. Here's how you do it:
+
+   ```
+   qremote -c /path/to/config.qremote
+   ```
+
+   Replace `/path/to/config.qremote` with the actual path to your configuration file.
+
+5. **Establish Connection**: qremote will read the server details from the configuration file and attempt to establish a connection to the remote server using those details. If the connection is successful, you'll be connected to the remote process and can start interacting with it.
+
+Using a configuration file can save you time and effort, especially if you frequently connect to the same server. It also helps ensure consistency and accuracy in specifying server details.
+
 ### Conclusion
 **Benefits of qRemote:**
 
