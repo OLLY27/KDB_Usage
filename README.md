@@ -293,7 +293,7 @@ apple banana
 3     7
 ```
 
-Certainly! Here's how you can use a configuration file with qremote:
+You can use a configuration file with qremote:
 
 1. **Create a Configuration File**: Begin by creating a configuration file. This file typically has a `.qremote` extension, although the name can vary. You can create this file using a text editor like Notepad or Vim.
 
